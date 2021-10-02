@@ -7,6 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
+    <h2> Admin Dashboard</h2>
+<hr>
+<br>
 <div align ="center">
 <form  action ="updateflights" method = "post">
 <label for="flightname">Select Airline: </label>
