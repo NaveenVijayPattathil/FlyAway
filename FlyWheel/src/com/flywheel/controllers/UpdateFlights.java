@@ -59,14 +59,18 @@ public class UpdateFlights extends HttpServlet {
         transaction.commit();
         
         factory.close();
-        
-         if(newFlight != null)
+          if(newFlight != null)
          {
-        	out.print("The fligt details was succefully added"); 
+        	out.println("The fligt details was succefully added"); 
            RequestDispatcher dispatch = request.getRequestDispatcher("/adminDashboard.jsp");
-           dispatch.forward(request, response);
+           dispatch.include(request, response);
          }
-      
+         else
+         {
+        	 out.println("An error occured.."); 
+             RequestDispatcher dispatch = request.getRequestDispatcher("/adminDashboard.jsp");
+             dispatch.include(request, response);
+         }
         
 	}
 
